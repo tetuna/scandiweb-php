@@ -1,9 +1,10 @@
 <?php
+
 class App
 {
     //properties
-    protected $controller = '';
-    protected $method = '';
+    protected $controller = 'product';
+    protected $method = 'index';
     protected $params = [];
     //methods
     public function __construct()
