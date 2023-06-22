@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Products;
+
 abstract class ProductAbstract
 {
     protected static $sku;
@@ -11,9 +13,9 @@ abstract class ProductAbstract
 
     public function __construct($data)
     {
-        self::$sku = $data['sku'];
-        self::$name = $data['name'];
-        self::$price = $data['price'];
-        self::$product_type = $data['product_type'];
+        self::$sku = $data["sku"];
+        self::$name = $data["name"];
+        self::$price = $data["price"];
+        self::$product_type = $data["product_type"];
     }
 }

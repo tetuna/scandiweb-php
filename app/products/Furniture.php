@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Products;
+
 class Furniture extends ProductAbstract
 {
     protected $height;
@@ -9,9 +11,9 @@ class Furniture extends ProductAbstract
     public function __construct($data)
     {
         parent::__construct($data);
-        $this->height = $data['height'];
-        $this->width = $data['width'];
-        $this->length = $data['length'];
+        $this->height = $data["height"];
+        $this->width = $data["width"];
+        $this->length = $data["length"];
     }
 
     public function returnTypeData()

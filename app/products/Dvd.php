@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Products;
+
 class Dvd extends ProductAbstract
 {
     protected $size;
@@ -7,7 +9,7 @@ class Dvd extends ProductAbstract
     public function __construct($data)
     {
         parent::__construct($data);
-        $this->size = $data['size'];
+        $this->size = $data["size"];
     }
 
     public function returnTypeData()

@@ -1,10 +1,12 @@
 <?php
 session_start();
-require_once 'helpers/ProductAbstract.php';
-require_once 'helpers/Dvd.php';
-require_once 'helpers/Book.php';
-require_once 'helpers/Furniture.php';
-require_once 'helpers/DataForSave.php';
+require_once 'validations/Validator.php';
+
+require_once 'products/ProductAbstract.php';
+require_once 'products/Dvd.php';
+require_once 'products/Book.php';
+require_once 'products/Furniture.php';
+require_once 'products/DataForSave.php';
 
 require_once 'core/App.php';
 require_once 'core/Controller.php';

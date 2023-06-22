@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Products;
+
 class Book extends ProductAbstract
 {
     protected $weight;
@@ -7,7 +9,7 @@ class Book extends ProductAbstract
     public function __construct($data)
     {
         parent::__construct($data);
-        $this->weight = $data['weight'];
+        $this->weight = $data["weight"];
     }
 
     public function returnTypeData()

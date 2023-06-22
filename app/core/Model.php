@@ -1,6 +1,10 @@
 <?php
 
+namespace App\Core;
+
 use FFI\Exception;
+use \PDO;
+use \PDOException;
 
 class Model {
     private $host = "localhost";
