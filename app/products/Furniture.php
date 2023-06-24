@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Products;
-
 class Furniture extends ProductAbstract
 {
     protected $height;

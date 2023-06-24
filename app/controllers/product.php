@@ -1,11 +1,5 @@
 <?php
 
-namespace App\Controllers;
-
-use App\Core\Controller;
-use App\Validations\Validator;
-use App\Products\DataForSave;
-
 class Product extends Controller
 {
     private $model;
@@ -32,7 +26,11 @@ class Product extends Controller
     {
         $singleProduct = $this->model->find($_GET["sku"])->fetch();
         if ($singleProduct) {
-            echo json_encode([$singleProduct]);
+            $class = ucfirst($singleProduct["product_type"]);
+            $onlyTypeData = new $class($singleProduct);
+            $productCleanData = new ProductCleanData();
+            $data = $productCleanData->returnData($onlyTypeData, $singleProduct);
+            echo json_encode([$data]);
         } else {
             header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found", true, 404);
             echo json_encode(["message" => "Product not found - sku:" . $_GET["sku"]]);
@@ -60,7 +58,7 @@ class Product extends Controller
 
         $class = ucfirst($productForStore["product_type"]);
         $onlyTypeData = new $class($productForStore);
-        $dataForSave = new DataForSave();
+        $dataForSave = new ProductCleanData();
         $data = $dataForSave->returnData($onlyTypeData, $productForStore);
 
         // validate Start()

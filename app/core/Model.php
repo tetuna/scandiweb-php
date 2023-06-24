@@ -1,15 +1,11 @@
 <?php
 
-namespace App\Core;
-
 use FFI\Exception;
-use \PDO;
-use \PDOException;
 
 class Model {
     private $host = "localhost";
-    private $user = "";
-    private $password = "";
+    private $user = "root";
+    private $password = "123";
     private $dbName = "scandiweb";
 
     protected function connect()

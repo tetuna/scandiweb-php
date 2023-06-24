@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Products;
-
 class Dvd extends ProductAbstract
 {
     protected $size;

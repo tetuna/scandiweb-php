@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Products;
-
 abstract class ProductAbstract
 {
     protected static $sku;

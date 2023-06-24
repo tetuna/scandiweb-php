@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Validations;
-
 class Validator
 {
     //validation section Start()
