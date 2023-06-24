@@ -1,9 +1,10 @@
 <?php
+
 class App
 {
     //properties
-    protected $controller = '';
-    protected $method = '';
+    protected $controller = 'product';
+    protected $method = 'index';
     protected $params = [];
     //methods
     public function __construct()
@@ -31,8 +32,8 @@ class App
     }
     private function parseUrl()
     {
-        if (isset($_GET['url'])) {
-            $url = rtrim($_GET['url'], '/');
+        if (isset($_GET["url"])) {
+            $url = rtrim($_GET["url"], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $url = explode('/', $url);
             return $url;

@@ -1,4 +1,5 @@
 <?php
+
 class Controller
 {
     protected function model($model)

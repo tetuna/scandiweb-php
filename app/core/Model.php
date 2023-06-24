@@ -4,8 +4,8 @@ use FFI\Exception;
 
 class Model {
     private $host = "localhost";
-    private $user = "";
-    private $password = "";
+    private $user = "root";
+    private $password = "123";
     private $dbName = "scandiweb";
 
     protected function connect()
