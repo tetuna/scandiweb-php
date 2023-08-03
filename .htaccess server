@@ -1,0 +1,20 @@
+Options -MultiViews
+RewriteEngine On
+
+#tricky One HERE
+RewriteBase /websites/scandiweb-php/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^/?websites/scandiweb-php/(.*)$ /websites/scandiweb-php/index.php?url=$1 [QSA,L]
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /websites/scandiweb-react/
+  RewriteRule ^/?websites/scandiweb-php/index/.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /websites/scandiweb-react/index.html [L]
+</IfModule>
